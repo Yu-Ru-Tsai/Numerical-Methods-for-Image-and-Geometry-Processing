@@ -1,0 +1,10 @@
+function V1 = SimplicialMap(F, uv, V, uv1)
+Tri_V  = triangulation(F, V);
+Tri_uv = triangulation(F, uv);
+[TI0, BC0] = pointLocation(Tri_uv, uv1);
+NanID0 = isnan(TI0);
+V1no = size(uv1,1);
+V1 = zeros(V1no,size(uv1,2));
+V1(~NanID0,:) = barycentricToCartesian(Tri_V, TI0(~NanID0), BC0(~NanID0,:));
+Vid = knnsearch(uv, uv1(NanID0,:));
+V1( NanID0,:) = V(Vid,:);

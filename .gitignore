@@ -1,0 +1,40 @@
+# Repo-specific GitIgnore ----------------------------------------------------------------------------------------------
+# *.jpg
+# *.jpeg
+# *.png
+# *.bmp
+# *.tif
+# *.tiff
+# *.heic
+# *.JPG
+# *.JPEG
+# *.PNG
+# *.BMP
+# *.TIF
+# *.TIFF
+# *.HEIC
+# *.mp4
+# *.mov
+# *.MOV
+# *.avi
+*.data
+*.json
+*.cfg
+
+# MATLAB GitIgnore -----------------------------------------------------------------------------------------------------
+*.mat
+*.asv
+!targets*.mat
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+#Pycharm
+.idea
+
+# https://github.com/github/gitignore/blob/master/Global/macOS.gitignore -----------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+
+.xlsx
